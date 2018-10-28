@@ -4,7 +4,7 @@ const yt = require('ytdl-core');
 const ayarlar = require('./ayarlar.json');
 const client = new Client();
 
-const youtube = new YouTube(BOT_API);
+const youtube = new YouTube(process.env.BOT_API);
 
 
 
@@ -115,4 +115,4 @@ client.on('message', msg => {
 	if (!msg.content.startsWith(ayarlar.prefix)) return;
 	if (commands.hasOwnProperty(msg.content.toLowerCase().slice(ayarlar.prefix.length).split(' ')[0])) commands[msg.content.toLowerCase().slice(ayarlar.prefix.length).split(' ')[0]](msg);
 });
-client.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
