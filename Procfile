@@ -1,2 +1,2 @@
 worker node server.js
-worker npm install discord.js
+installer npm install discord.js
